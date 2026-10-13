@@ -1,0 +1,18 @@
+
+# JetBrains IDE
+.idea/
+*.iml
+
+# Python cache (if scripts are added later)
+__pycache__/
+*.py[cod]
+.venv/
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Temporary files
+*.tmp
+*.bak
+*~
