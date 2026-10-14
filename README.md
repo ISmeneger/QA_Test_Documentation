@@ -38,6 +38,7 @@
 | Catalog | [Checklist](checklists/CATALOG_CHECKLIST.md) · [Test Cases](test-cases/CATALOG_TEST_CASES.md) · [Execution Log](test-reports/CATALOG_EXECUTION_LOG.md) · [Summary](test-reports/CATALOG_TEST_SUMMARY_REPORT.md) · [Screenshots](screenshots/catalog/) |
 | Product Details | [Checklist](checklists/PRODUCT_DETAILS_CHECKLIST.md) · [Test Cases](test-cases/PRODUCT_DETAILS_TEST_CASES.md) · [Execution Log](test-reports/PRODUCT_DETAILS_EXECUTION_LOG.md) · [Summary](test-reports/PRODUCT_DETAILS_TEST_SUMMARY_REPORT.md) · [Screenshots](screenshots/product-details/) |
 | Shopping Bag | [Checklist](checklists/SHOPPING_BAG_CHECKLIST.md) · [Test Cases](test-cases/SHOPPING_BAG_TEST_CASES.md) · [Execution Log](test-reports/SHOPPING_BAG_EXECUTION_LOG.md) · [Summary](test-reports/SHOPPING_BAG_TEST_SUMMARY_REPORT.md) · [Screenshots](screenshots/shopping-bag/) |
+| План автоматизации | [Automation Backlog](automation/AUTOMATION_BACKLOG.md) · [Manual QA ↔ Java/Python Coverage Audit](automation/AUTOMATION_COVERAGE_AUDIT.md) |
 
 Журналы выполнения содержат идентификаторы запусков, тестовые данные, фактические результаты и ссылки на скриншоты. **Test Plan остаётся исходным плановым документом**; актуальные результаты следует смотреть в журналах, итоговых отчётах и RTM.
 
