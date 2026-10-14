@@ -3,12 +3,12 @@
 | Поле | Значение |
 |---|---|
 | Document ID | `RTM-AE-001` |
-| Версия | `0.1` — проект матрицы |
+| Версия | `0.2` — проектное покрытие и фактическое выполнение |
 | Дата | `2026-10-13` |
-| Автор | `ISmeneger` |
+| Автор | Ilya Sidorychev |
 | Основание | [Requirements & Assumptions](../requirements/REQUIREMENTS_AND_ASSUMPTIONS.md) |
 | Test Plan | [TP-AE-001](../test-plan/TEST_PLAN.md) |
-| Статус выполнения | **Not Run** — результаты ручных прогонов не представлены |
+| Статус выполнения | **5 Search test cases executed:** 3 Passed, 2 Needs Clarification |
 
 > **Ограничение:** `REQ-AE-001`–`REQ-AE-023` — проверяемые гипотезы независимого учебного проекта, **не официальные требования** American Eagle. Матрица отражает наличие спроектированных сценариев, но не их успешное выполнение. Связь с чек-листом означает наличие планируемой проверки, а не результат тестирования.
 
@@ -21,21 +21,24 @@
 | Гипотез без подробного тест-кейса | 3 |
 | Проектное покрытие гипотез тест-кейсами | **20 / 23 = 87,0%** |
 | Создано подробных тест-кейсов | 20 |
-| Выполнено вручную в рамках этого проекта | **0 (не заявлено)** |
+| Выполнено вручную в рамках этого проекта | **5 из 20 тест-кейсов** |
+| Passed | **3** |
+| Needs Clarification | **2** |
+| Not Run | **15** |
 
 Все `REQ-AE-001`–`REQ-AE-020` имеют минимум один соответствующий тест-кейс. Дополнительные области `REQ-AE-021`–`REQ-AE-023` остаются **без подробных тест-кейсов**. Отдельные пункты чек-листов также не превращены в подробные тест-кейсы; метрика выше не означает 100% покрытие сценариев.
 
 ## 2. Матрица трассируемости
 
-Обозначения: `Designed` — есть тест-кейс со статусом `Not Run`; `Gap` — подробный тест-кейс пока отсутствует. **Ни одна строка не свидетельствует о `Passed`.** Ссылки на чек-листы ведут к документам целиком, номера проверок указаны рядом.
+Обозначения: `Designed` — подробный тест-кейс существует; `Gap` — подробный тест-кейс отсутствует. Execution отражает фактические результаты, а не статус проектирования. Ссылки на чек-листы ведут к документам целиком, номера проверок указаны рядом.
 
 | Гипотеза | Область | Чек-лист (ID) | Тест-кейсы | Design status | Execution |
 |---|---|---|---|---|---|
-| `REQ-AE-001` | Search: открытие поля | [Search](../checklists/SEARCH_CHECKLIST.md) `CL-SR-001–003` | [TC-AE-201](../test-cases/SEARCH_TEST_CASES.md) | Designed | Not Run |
-| `REQ-AE-002` | Search: релевантный товар | [Search](../checklists/SEARCH_CHECKLIST.md) `CL-SR-006–008` | [TC-AE-202](../test-cases/SEARCH_TEST_CASES.md) | Designed | Not Run |
-| `REQ-AE-003` | Search: отправка запроса | [Search](../checklists/SEARCH_CHECKLIST.md) `CL-SR-004–005, 009` | [TC-AE-202, 203](../test-cases/SEARCH_TEST_CASES.md) | Designed | Not Run |
-| `REQ-AE-004` | Search: неизвестный запрос | [Search](../checklists/SEARCH_CHECKLIST.md) `CL-SR-012–013` | [TC-AE-204](../test-cases/SEARCH_TEST_CASES.md) | Designed; Needs Clarification | Not Run |
-| `REQ-AE-005` | Search: пустой запрос | [Search](../checklists/SEARCH_CHECKLIST.md) `CL-SR-010–011` | [TC-AE-205](../test-cases/SEARCH_TEST_CASES.md) | Designed; Needs Clarification | Not Run |
+| `REQ-AE-001` | Search: открытие поля | [Search](../checklists/SEARCH_CHECKLIST.md) `CL-SR-001–003` | [TC-AE-201](../test-cases/SEARCH_TEST_CASES.md) | Designed | [Passed](../test-reports/SEARCH_EXECUTION_LOG.md) |
+| `REQ-AE-002` | Search: релевантный товар | [Search](../checklists/SEARCH_CHECKLIST.md) `CL-SR-006–008` | [TC-AE-202](../test-cases/SEARCH_TEST_CASES.md) | Designed | [Passed](../test-reports/SEARCH_EXECUTION_LOG.md) |
+| `REQ-AE-003` | Search: отправка запроса | [Search](../checklists/SEARCH_CHECKLIST.md) `CL-SR-004–005, 009` | [TC-AE-202, 203](../test-cases/SEARCH_TEST_CASES.md) | Designed | [Passed (`TC-AE-202`, `TC-AE-203`)](../test-reports/SEARCH_EXECUTION_LOG.md) |
+| `REQ-AE-004` | Search: неизвестный запрос | [Search](../checklists/SEARCH_CHECKLIST.md) `CL-SR-012–013` | [TC-AE-204](../test-cases/SEARCH_TEST_CASES.md) | Designed; Needs Clarification | [Needs Clarification](../test-reports/SEARCH_EXECUTION_LOG.md) |
+| `REQ-AE-005` | Search: пустой запрос | [Search](../checklists/SEARCH_CHECKLIST.md) `CL-SR-010–011` | [TC-AE-205](../test-cases/SEARCH_TEST_CASES.md) | Designed; Needs Clarification | [Needs Clarification](../test-reports/SEARCH_EXECUTION_LOG.md) |
 | `REQ-AE-006` | Catalog: переход в категорию | [Catalog](../checklists/CATALOG_CHECKLIST.md) `CL-CT-001–004` | [TC-AE-301](../test-cases/CATALOG_TEST_CASES.md) | Designed | Not Run |
 | `REQ-AE-007` | Catalog: выбор сортировки | [Catalog](../checklists/CATALOG_CHECKLIST.md) `CL-CT-005–007` | [TC-AE-302](../test-cases/CATALOG_TEST_CASES.md) | Designed | Not Run |
 | `REQ-AE-008` | Catalog: порядок цен | [Catalog](../checklists/CATALOG_CHECKLIST.md) `CL-CT-008–009` | [TC-AE-303](../test-cases/CATALOG_TEST_CASES.md) | Designed; Needs Clarification | Not Run |
@@ -66,9 +69,12 @@
 
 В каждой выполненной записи необходимо указать `Run ID`, дату/время/часовой пояс, браузер/ОС, регион/локаль/VPN, URL/данные товара, `Actual Result`, достоверный источник `Expected Result`, статус и `Evidence` (если есть). Ссылки на запись запуска и на подтверждённый дефект можно впоследствии добавить в матрицу отдельными столбцами или в отдельном execution report.
 
-Приоритет следующей итерации: провести несколько безопасных ручных запусков наиболее важных сценариев, затем оформить [Test Summary Report](../test-plan/TEST_PLAN.md) **по фактам**, а не по запланированным сценариям.
+Для Search выполнены пять сценариев; см. [Execution Log](../test-reports/SEARCH_EXECUTION_LOG.md) и [Search Test Summary](../test-reports/SEARCH_TEST_SUMMARY_REPORT.md). Следующая итерация — Product Details и Shopping Bag.
 
 ## 5. Связанные документы
+
+- [Search Execution Log](../test-reports/SEARCH_EXECUTION_LOG.md)
+- [Search Test Summary](../test-reports/SEARCH_TEST_SUMMARY_REPORT.md)
 
 - [README](../README.md)
 - [Requirements & Assumptions](../requirements/REQUIREMENTS_AND_ASSUMPTIONS.md)
@@ -80,4 +86,4 @@
 
 ---
 
-*Версия 0.1 — матрица проектного покрытия, без заявленных результатов ручного выполнения.*
+*Версия 0.2 — проектное покрытие и результаты пяти выполненных сценариев Search.*
