@@ -5,7 +5,7 @@
 | Document ID | `RA-AE-001` |
 | Версия | `0.1` — рабочий проект |
 | Дата | 2026-10-13 |
-| Автор | `ISmeneger` |
+| Автор | `Ilya Sidorychev` |
 | SUT | [American Eagle — US storefront](https://www.ae.com/us/en) |
 | Связанный план | [`TP-AE-001`](../test-plan/TEST_PLAN.md) |
 | Статус | **Гипотезы для проверки, не согласованные требования** |
