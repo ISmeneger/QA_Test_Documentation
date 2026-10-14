@@ -5,7 +5,7 @@
 | Document ID | `TC-SUITE-AE-BAG-001` |
 | Версия | `0.1` (проект тест-кейсов) |
 | Дата | `2026-10-13` |
-| Автор | `ISmeneger` |
+| Автор | Ilya Sidorychev |
 | SUT | [American Eagle — US storefront](https://www.ae.com/us/en) |
 | План | [TP-AE-001](../test-plan/TEST_PLAN.md) |
 | Требования-гипотезы | [RA-AE-001](../requirements/REQUIREMENTS_AND_ASSUMPTIONS.md) |
