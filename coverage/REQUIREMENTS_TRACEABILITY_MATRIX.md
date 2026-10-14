@@ -3,12 +3,12 @@
 | Поле | Значение |
 |---|---|
 | Document ID | `RTM-AE-001` |
-| Версия | `0.4` — проектное покрытие и фактические результаты |
+| Версия | `0.5` — проектное покрытие и фактические результаты |
 | Дата | `2026-10-13` |
 | Автор | Ilya Sidorychev |
 | Основание | [Requirements & Assumptions](../requirements/REQUIREMENTS_AND_ASSUMPTIONS.md) |
 | Test Plan | [TP-AE-001](../test-plan/TEST_PLAN.md) |
-| Статус выполнения | **15 executed:** 13 Passed, 2 Needs Clarification; 5 Not Run |
+| Статус выполнения | **20 executed:** 18 Passed, 2 Needs Clarification; 0 Not Run |
 
 > **Ограничение:** `REQ-AE-001`–`REQ-AE-023` — проверяемые гипотезы независимого учебного проекта, **не официальные требования** American Eagle. Матрица отражает наличие спроектированных сценариев, но не их успешное выполнение. Связь с чек-листом означает наличие планируемой проверки, а не результат тестирования.
 
@@ -21,10 +21,10 @@
 | Гипотез без подробного тест-кейса | 3 |
 | Проектное покрытие гипотез тест-кейсами | **20 / 23 = 87,0%** |
 | Создано подробных тест-кейсов | 20 |
-| Выполнено вручную в рамках этого проекта | **15 из 20** |
-| Passed | **13** (включая 2 вариации Bag) |
+| Выполнено вручную в рамках этого проекта | **20 из 20** |
+| Passed | **18** (включая 2 вариации Bag) |
 | Needs Clarification | **2** |
-| Not Run | **5** |
+| Not Run | **0** |
 
 Все `REQ-AE-001`–`REQ-AE-020` имеют минимум один соответствующий тест-кейс. Дополнительные области `REQ-AE-021`–`REQ-AE-023` остаются **без подробных тест-кейсов**. Отдельные пункты чек-листов также не превращены в подробные тест-кейсы; метрика выше не означает 100% покрытие сценариев.
 
@@ -39,11 +39,11 @@
 | `REQ-AE-003` | Search: отправка запроса | [Search](../checklists/SEARCH_CHECKLIST.md) `CL-SR-004–005, 009` | [TC-AE-202, 203](../test-cases/SEARCH_TEST_CASES.md) | Designed | [Passed](../test-reports/SEARCH_EXECUTION_LOG.md) |
 | `REQ-AE-004` | Search: неизвестный запрос | [Search](../checklists/SEARCH_CHECKLIST.md) `CL-SR-012–013` | [TC-AE-204](../test-cases/SEARCH_TEST_CASES.md) | Designed; Needs Clarification | [Needs Clarification](../test-reports/SEARCH_EXECUTION_LOG.md) |
 | `REQ-AE-005` | Search: пустой запрос | [Search](../checklists/SEARCH_CHECKLIST.md) `CL-SR-010–011` | [TC-AE-205](../test-cases/SEARCH_TEST_CASES.md) | Designed; Needs Clarification | [Needs Clarification](../test-reports/SEARCH_EXECUTION_LOG.md) |
-| `REQ-AE-006` | Catalog: переход в категорию | [Catalog](../checklists/CATALOG_CHECKLIST.md) `CL-CT-001–004` | [TC-AE-301](../test-cases/CATALOG_TEST_CASES.md) | Designed | Not Run |
-| `REQ-AE-007` | Catalog: выбор сортировки | [Catalog](../checklists/CATALOG_CHECKLIST.md) `CL-CT-005–007` | [TC-AE-302](../test-cases/CATALOG_TEST_CASES.md) | Designed | Not Run |
-| `REQ-AE-008` | Catalog: порядок цен | [Catalog](../checklists/CATALOG_CHECKLIST.md) `CL-CT-008–009` | [TC-AE-303](../test-cases/CATALOG_TEST_CASES.md) | Designed; Needs Clarification | Not Run |
-| `REQ-AE-009` | Catalog: фильтрация цен | [Catalog](../checklists/CATALOG_CHECKLIST.md) `CL-CT-011–020` | [TC-AE-304, 305](../test-cases/CATALOG_TEST_CASES.md) | Designed; Needs Clarification | Not Run |
-| `REQ-AE-010` | Catalog: состояние UI | [Catalog](../checklists/CATALOG_CHECKLIST.md) `CL-CT-007, 013, 018–020` | [TC-AE-302, 304, 305](../test-cases/CATALOG_TEST_CASES.md) | Designed | Not Run |
+| `REQ-AE-006` | Catalog: переход в категорию | [Catalog](../checklists/CATALOG_CHECKLIST.md) `CL-CT-001–004` | [TC-AE-301](../test-cases/CATALOG_TEST_CASES.md) | Designed | [Passed — Catalog Log](../test-reports/CATALOG_EXECUTION_LOG.md) |
+| `REQ-AE-007` | Catalog: выбор сортировки | [Catalog](../checklists/CATALOG_CHECKLIST.md) `CL-CT-005–007` | [TC-AE-302](../test-cases/CATALOG_TEST_CASES.md) | Designed | [Passed — Catalog Log](../test-reports/CATALOG_EXECUTION_LOG.md) |
+| `REQ-AE-008` | Catalog: порядок цен | [Catalog](../checklists/CATALOG_CHECKLIST.md) `CL-CT-008–009` | [TC-AE-303](../test-cases/CATALOG_TEST_CASES.md) | Designed; Needs Clarification | [Passed — Catalog Log](../test-reports/CATALOG_EXECUTION_LOG.md) |
+| `REQ-AE-009` | Catalog: фильтрация цен | [Catalog](../checklists/CATALOG_CHECKLIST.md) `CL-CT-011–020` | [TC-AE-304, 305](../test-cases/CATALOG_TEST_CASES.md) | Designed; Needs Clarification | [Passed — Catalog Log](../test-reports/CATALOG_EXECUTION_LOG.md) |
+| `REQ-AE-010` | Catalog: состояние UI | [Catalog](../checklists/CATALOG_CHECKLIST.md) `CL-CT-007, 013, 018–020` | [TC-AE-302, 304, 305](../test-cases/CATALOG_TEST_CASES.md) | Designed | [Passed — Catalog Log](../test-reports/CATALOG_EXECUTION_LOG.md) |
 | `REQ-AE-011` | PDP: открытие товара | [Product](../checklists/PRODUCT_DETAILS_CHECKLIST.md) `CL-PD-001–003` | [TC-AE-401](../test-cases/PRODUCT_DETAILS_TEST_CASES.md) | Designed | [Passed](../test-reports/PRODUCT_DETAILS_EXECUTION_LOG.md) |
 | `REQ-AE-012` | PDP: данные товара | [Product](../checklists/PRODUCT_DETAILS_CHECKLIST.md) `CL-PD-004–009` | [TC-AE-401](../test-cases/PRODUCT_DETAILS_TEST_CASES.md) | Designed | [Passed](../test-reports/PRODUCT_DETAILS_EXECUTION_LOG.md) |
 | `REQ-AE-013` | PDP: выбор варианта | [Product](../checklists/PRODUCT_DETAILS_CHECKLIST.md) `CL-PD-010–013` | [TC-AE-402](../test-cases/PRODUCT_DETAILS_TEST_CASES.md) | Designed | [Passed](../test-reports/PRODUCT_DETAILS_EXECUTION_LOG.md) |
@@ -70,15 +70,18 @@
 - [Search Execution Log](../test-reports/SEARCH_EXECUTION_LOG.md): 3 Passed, 2 Needs Clarification.
 - [Product Details Execution Log](../test-reports/PRODUCT_DETAILS_EXECUTION_LOG.md): 4 Passed.
 - [Shopping Bag Execution Log](../test-reports/SHOPPING_BAG_EXECUTION_LOG.md): 6 Passed в проверенных вариантах, из них два с отклонением от исходных предусловий.
-- Catalog: 5 Not Run.
+- [Catalog Execution Log](../test-reports/CATALOG_EXECUTION_LOG.md): 5 Passed (3 по видимой выборке).
 
 ## 5. Что обновлять после реального прогона
 
 В каждой выполненной записи необходимо указать `Run ID`, дату/время/часовой пояс, браузер/ОС, регион/локаль/VPN, URL/данные товара, `Actual Result`, достоверный источник `Expected Result`, статус и `Evidence` (если есть). Ссылки на журналы выполнения приведены в таблице; при обнаружении подтверждённого дефекта добавляется ссылка на баг-репорт.
 
-Следующая итерация — выполнение пяти тест-кейсов Catalog и обновление итоговой документации.
+Следующая итерация — обзор главного README, уточнение открытых вопросов Search и дополнительные проверки граничных значений Catalog.
 
 ## 6. Связанные документы
+
+- [Catalog Execution Log](../test-reports/CATALOG_EXECUTION_LOG.md)
+- [Catalog Test Summary](../test-reports/CATALOG_TEST_SUMMARY_REPORT.md)
 
 - [Shopping Bag Execution Log](../test-reports/SHOPPING_BAG_EXECUTION_LOG.md)
 - [Shopping Bag Test Summary](../test-reports/SHOPPING_BAG_TEST_SUMMARY_REPORT.md)
@@ -94,4 +97,4 @@
 
 ---
 
-*Версия 0.4 — матрица проектного покрытия и результаты 15 ручных проверок. Исполнение не заменяет подтверждение бизнес-требований.*
+*Версия 0.5 — матрица проектного покрытия и результаты 20 ручных проверок. Исполнение не заменяет подтверждение бизнес-требований.*
