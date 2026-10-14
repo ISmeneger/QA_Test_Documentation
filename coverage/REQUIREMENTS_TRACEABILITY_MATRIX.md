@@ -3,12 +3,12 @@
 | Поле | Значение |
 |---|---|
 | Document ID | `RTM-AE-001` |
-| Версия | `0.2` — проектное покрытие и фактическое выполнение |
+| Версия | `0.3` — проектное покрытие и фактическое выполнение |
 | Дата | `2026-10-13` |
 | Автор | Ilya Sidorychev |
 | Основание | [Requirements & Assumptions](../requirements/REQUIREMENTS_AND_ASSUMPTIONS.md) |
 | Test Plan | [TP-AE-001](../test-plan/TEST_PLAN.md) |
-| Статус выполнения | **5 Search test cases executed:** 3 Passed, 2 Needs Clarification |
+| Статус выполнения | **9 test cases executed:** Search 3 Passed + 2 Needs Clarification; Product Details 4 Passed |
 
 > **Ограничение:** `REQ-AE-001`–`REQ-AE-023` — проверяемые гипотезы независимого учебного проекта, **не официальные требования** American Eagle. Матрица отражает наличие спроектированных сценариев, но не их успешное выполнение. Связь с чек-листом означает наличие планируемой проверки, а не результат тестирования.
 
@@ -21,10 +21,10 @@
 | Гипотез без подробного тест-кейса | 3 |
 | Проектное покрытие гипотез тест-кейсами | **20 / 23 = 87,0%** |
 | Создано подробных тест-кейсов | 20 |
-| Выполнено вручную в рамках этого проекта | **5 из 20 тест-кейсов** |
-| Passed | **3** |
+| Выполнено вручную в рамках этого проекта | **9 из 20 тест-кейсов** |
+| Passed | **7** |
 | Needs Clarification | **2** |
-| Not Run | **15** |
+| Not Run | **11** |
 
 Все `REQ-AE-001`–`REQ-AE-020` имеют минимум один соответствующий тест-кейс. Дополнительные области `REQ-AE-021`–`REQ-AE-023` остаются **без подробных тест-кейсов**. Отдельные пункты чек-листов также не превращены в подробные тест-кейсы; метрика выше не означает 100% покрытие сценариев.
 
@@ -44,12 +44,12 @@
 | `REQ-AE-008` | Catalog: порядок цен | [Catalog](../checklists/CATALOG_CHECKLIST.md) `CL-CT-008–009` | [TC-AE-303](../test-cases/CATALOG_TEST_CASES.md) | Designed; Needs Clarification | Not Run |
 | `REQ-AE-009` | Catalog: фильтрация цен | [Catalog](../checklists/CATALOG_CHECKLIST.md) `CL-CT-011–020` | [TC-AE-304, 305](../test-cases/CATALOG_TEST_CASES.md) | Designed; Needs Clarification | Not Run |
 | `REQ-AE-010` | Catalog: состояние UI | [Catalog](../checklists/CATALOG_CHECKLIST.md) `CL-CT-007, 013, 018–020` | [TC-AE-302, 304, 305](../test-cases/CATALOG_TEST_CASES.md) | Designed | Not Run |
-| `REQ-AE-011` | PDP: открытие товара | [Product](../checklists/PRODUCT_DETAILS_CHECKLIST.md) `CL-PD-001–003` | [TC-AE-401](../test-cases/PRODUCT_DETAILS_TEST_CASES.md) | Designed | Not Run |
-| `REQ-AE-012` | PDP: данные товара | [Product](../checklists/PRODUCT_DETAILS_CHECKLIST.md) `CL-PD-004–009` | [TC-AE-401](../test-cases/PRODUCT_DETAILS_TEST_CASES.md) | Designed | Not Run |
-| `REQ-AE-013` | PDP: выбор варианта | [Product](../checklists/PRODUCT_DETAILS_CHECKLIST.md) `CL-PD-010–013` | [TC-AE-402](../test-cases/PRODUCT_DETAILS_TEST_CASES.md) | Designed | Not Run |
-| `REQ-AE-014` | PDP: доступность Add to Bag | [Product](../checklists/PRODUCT_DETAILS_CHECKLIST.md) `CL-PD-014–017` | [TC-AE-403](../test-cases/PRODUCT_DETAILS_TEST_CASES.md) | Designed; Needs Clarification | Not Run |
-| `REQ-AE-015` | Bag: добавление | [Bag](../checklists/SHOPPING_BAG_CHECKLIST.md) `CL-BAG-003–005` | [TC-AE-101](../test-cases/SHOPPING_BAG_TEST_CASES.md), [TC-AE-404](../test-cases/PRODUCT_DETAILS_TEST_CASES.md) | Designed | Not Run |
-| `REQ-AE-016` | Bag: размер и цена | [Bag](../checklists/SHOPPING_BAG_CHECKLIST.md) `CL-BAG-006–007` | [TC-AE-102](../test-cases/SHOPPING_BAG_TEST_CASES.md), [TC-AE-404](../test-cases/PRODUCT_DETAILS_TEST_CASES.md) | Designed; Needs Clarification | Not Run |
+| `REQ-AE-011` | PDP: открытие товара | [Product](../checklists/PRODUCT_DETAILS_CHECKLIST.md) `CL-PD-001–003` | [TC-AE-401](../test-cases/PRODUCT_DETAILS_TEST_CASES.md) | Designed | **Passed** — [PD Log](../test-reports/PRODUCT_DETAILS_EXECUTION_LOG.md) |
+| `REQ-AE-012` | PDP: данные товара | [Product](../checklists/PRODUCT_DETAILS_CHECKLIST.md) `CL-PD-004–009` | [TC-AE-401](../test-cases/PRODUCT_DETAILS_TEST_CASES.md) | Designed | **Passed** — [PD Log](../test-reports/PRODUCT_DETAILS_EXECUTION_LOG.md) |
+| `REQ-AE-013` | PDP: выбор варианта | [Product](../checklists/PRODUCT_DETAILS_CHECKLIST.md) `CL-PD-010–013` | [TC-AE-402](../test-cases/PRODUCT_DETAILS_TEST_CASES.md) | Designed | **Passed** — [PD Log](../test-reports/PRODUCT_DETAILS_EXECUTION_LOG.md) |
+| `REQ-AE-014` | PDP: доступность Add to Bag | [Product](../checklists/PRODUCT_DETAILS_CHECKLIST.md) `CL-PD-014–017` | [TC-AE-403](../test-cases/PRODUCT_DETAILS_TEST_CASES.md) | Designed; Needs Clarification | **Passed** — [PD Log](../test-reports/PRODUCT_DETAILS_EXECUTION_LOG.md) |
+| `REQ-AE-015` | Bag: добавление | [Bag](../checklists/SHOPPING_BAG_CHECKLIST.md) `CL-BAG-003–005` | [TC-AE-101](../test-cases/SHOPPING_BAG_TEST_CASES.md), [TC-AE-404](../test-cases/PRODUCT_DETAILS_TEST_CASES.md) | Designed | **Partial: TC-AE-404 Passed; Bag test cases Not Run** — [PD Log](../test-reports/PRODUCT_DETAILS_EXECUTION_LOG.md) |
+| `REQ-AE-016` | Bag: размер и цена | [Bag](../checklists/SHOPPING_BAG_CHECKLIST.md) `CL-BAG-006–007` | [TC-AE-102](../test-cases/SHOPPING_BAG_TEST_CASES.md), [TC-AE-404](../test-cases/PRODUCT_DETAILS_TEST_CASES.md) | Designed; Needs Clarification | **Partial: TC-AE-404 Passed; Bag test cases Not Run** — [PD Log](../test-reports/PRODUCT_DETAILS_EXECUTION_LOG.md) |
 | `REQ-AE-017` | Bag: quantity | [Bag](../checklists/SHOPPING_BAG_CHECKLIST.md) `CL-BAG-008–014` | [TC-AE-103](../test-cases/SHOPPING_BAG_TEST_CASES.md) | Designed | Not Run |
 | `REQ-AE-018` | Bag: subtotal | [Bag](../checklists/SHOPPING_BAG_CHECKLIST.md) `CL-BAG-011–012, 017` | [TC-AE-104, 105](../test-cases/SHOPPING_BAG_TEST_CASES.md) | Designed; Needs Clarification | Not Run |
 | `REQ-AE-019` | Bag: удаление | [Bag](../checklists/SHOPPING_BAG_CHECKLIST.md) `CL-BAG-018–020` | [TC-AE-106](../test-cases/SHOPPING_BAG_TEST_CASES.md) | Designed | Not Run |
@@ -80,10 +80,12 @@
 - [Requirements & Assumptions](../requirements/REQUIREMENTS_AND_ASSUMPTIONS.md)
 - [Test Plan](../test-plan/TEST_PLAN.md)
 - [Search Test Cases](../test-cases/SEARCH_TEST_CASES.md)
+- [Product Details Execution Log](../test-reports/PRODUCT_DETAILS_EXECUTION_LOG.md)
+- [Product Details Test Summary](../test-reports/PRODUCT_DETAILS_TEST_SUMMARY_REPORT.md)
 - [Catalog Test Cases](../test-cases/CATALOG_TEST_CASES.md)
 - [Product Details Test Cases](../test-cases/PRODUCT_DETAILS_TEST_CASES.md)
 - [Shopping Bag Test Cases](../test-cases/SHOPPING_BAG_TEST_CASES.md)
 
 ---
 
-*Версия 0.2 — проектное покрытие и результаты пяти выполненных сценариев Search.*
+*Версия 0.3 — проектное покрытие и результаты пяти выполненных сценариев Search.*
