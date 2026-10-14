@@ -5,7 +5,7 @@
 | Document ID | `CL-AE-PRODUCT-001` |
 | Версия | `0.1` — проект проверок |
 | Дата | 2026-10-13 |
-| Автор | `ISmeneger` |
+| Автор | Ilya Sidorychev |
 | SUT | [American Eagle — US storefront](https://www.ae.com/us/en) |
 | Test Plan | [`TP-AE-001`](../test-plan/TEST_PLAN.md) |
 | Requirements | [`RA-AE-001`](../requirements/REQUIREMENTS_AND_ASSUMPTIONS.md) |
