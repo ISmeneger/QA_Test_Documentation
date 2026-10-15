@@ -32,7 +32,7 @@ Backlog связывает ручные сценарии с существующ
 | `AUTO-AE-02` | [204–205](../test-cases/SEARCH_TEST_CASES.md) | Неизвестный и пустой запросы | UI | **P1 / Requires clarification** | Java `@KnownDefect`, Python `xfail`; ручной результат `Needs Clarification`. Уточнить правила выдачи; для пустого ввода нет отдельного теста |
 | `AUTO-AE-03` | [301–302](../test-cases/CATALOG_TEST_CASES.md) | Переход в Men's Clothes и применение Low to High | UI | P2 | Навигация реализована в Java/Python; сортировка присутствует в Python |
 | `AUTO-AE-04` | [303](../test-cases/CATALOG_TEST_CASES.md) | Сортировка неубывающих цен | UI | P2 | Python `test_products_are_sorted_by_price_low_to_high`; уточнить sale/regular/from |
-| `AUTO-AE-05` | [304–305](../test-cases/CATALOG_TEST_CASES.md) | Диапазон `$25–$50` и совместная сортировка | UI | **P1** | Python проверяет фильтр и сортировку отдельно; добавить combined-сценарий `TC-AE-305` и состояние UI |
+| `AUTO-AE-05` | [304–305](../test-cases/CATALOG_TEST_CASES.md) | Диапазон `$25–$50` и совместная сортировка | UI | **Implemented (Python)** | `test_products_are_filtered_and_sorted_by_price` проверяет обе активные настройки, диапазон и порядок цен; локально 4/4 каталожных теста Passed (сообщено автором). CI отдельно не проверен |
 | `AUTO-AE-06` | [401–402](../test-cases/PRODUCT_DETAILS_TEST_CASES.md) | PDP и переключение размеров | UI | P3 | Открытие товара и перенос выбранного размера есть; усилить проверки полей и вариаций |
 | `AUTO-AE-07` | [403–404](../test-cases/PRODUCT_DETAILS_TEST_CASES.md) | CTA до/после выбора размера; добавление в Bag | UI | P2 | Позитивное добавление и соответствие size/price есть; добавить проверку disabled/enabled CTA |
 | `AUTO-AE-08` | [101–102](../test-cases/SHOPPING_BAG_TEST_CASES.md) | Добавление в пустую корзину, сопоставление товара | UI + API | P2 | Java/Python UI и API имеют релевантные тесты; явное empty Bag лучше установлено в API |
@@ -45,7 +45,7 @@ Backlog связывает ручные сценарии с существующ
 ## Очередность работы
 
 1. **P1 — Search:** исследовать expected result неизвестного запроса и согласовать `KnownDefect` / `xfail` со статусом `Needs Clarification` ручного теста.
-2. **P1 — Catalog:** добавить совместную проверку сортировки и фильтра в рамках одной UI-сессии, включая сохранение состояния.
+2. **P1 — Catalog:** совместная фильтрация и сортировка реализована в Python; проверить CI и при необходимости расширить проверку снятия фильтра.
 3. **P1 — Bag:** добавить проверку удаления одной из двух позиций с контролем сохранённой позиции и subtotal.
 4. **P2 — Search:** повторный запрос, пустое поле; не предполагать недокументированную реакцию на пустой ввод.
 5. **P2 — PDP:** дополнить проверку Add to Bag до/после выбора размера.
