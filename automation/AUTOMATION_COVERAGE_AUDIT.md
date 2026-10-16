@@ -3,8 +3,8 @@
 | Поле | Значение |
 |---|---|
 | Document ID | `ACA-AE-001` |
-| Версия | `1.0` |
-| Дата аудита | 2026-10-15 |
+| Версия | `1.1` |
+| Дата аудита | 2026-10-16 |
 | Автор | Ilya Sidorychev |
 | SUT | [American Eagle US storefront](https://www.ae.com/us/en) |
 | Основа | [Manual Test Cases](../test-cases/) · [Java AQA](https://github.com/ISmeneger/American_Eagle_java_automation) · [Python AQA](https://github.com/ISmeneger/American_Eagle_python_automation) |
@@ -12,7 +12,7 @@
 
 ## Методика и статусы
 
-Сопоставлены все 20 ручных тест-кейсов с опубликованными тестовыми методами Java и Python. Исходный код проверялся по конкретным тестам и assertions; это **аудит реализации**, а не проверка последнего CI/Allure запуска.
+Сопоставлены все 20 ручных тест-кейсов с опубликованными тестовыми методами Java и Python. Исходный код проверялся по конкретным тестам и assertions; это **аудит реализации**. Дополнительно учтён последний подтверждённый Python CI/Allure от 16.10.2026; такой прогон не доказывает буквальную идентичность каждого ручного сценария.
 
 - **Direct** — существует автотест, проверяющий ключевое поведение ручного сценария; шаги и тестовые данные могут различаться.
 - **Partial** — покрыта часть ручного сценария либо похожий пользовательский поток.
@@ -32,7 +32,7 @@
 | `TC-AE-302` | Включить сортировку | Not found как отдельный UI-тест | Direct: `test_products_are_sorted_by_price_low_to_high` | Выбор сортировки включён в Python-тест |
 | `TC-AE-303` | Неубывание цен | Not found | Direct: `test_products_are_sorted_by_price_low_to_high` | Учесть правила regular/sale |
 | `TC-AE-304` | Фильтр `$25–$50` | Not found | Direct: `test_products_are_filtered_by_price_25_to_50` | Проверяется диапазон видимых цен |
-| `TC-AE-305` | Фильтр и сортировка вместе | Not found | Direct: [`test_products_are_filtered_and_sorted_by_price`](https://github.com/ISmeneger/American_Eagle_python_automation/blob/main/tests/ui/mens_clothes/test_mens_clothes.py) | Реализована проверка обоих выбранных элементов, диапазона и порядка цен; локально Passed, CI отдельно не проверен |
+| `TC-AE-305` | Фильтр и сортировка вместе | Not found | Direct: [`test_products_are_filtered_and_sorted_by_price`](https://github.com/ISmeneger/American_Eagle_python_automation/blob/main/tests/ui/mens_clothes/test_mens_clothes.py) | Реализована проверка обоих выбранных элементов, диапазона и порядка цен; общий Python CI 16.10.2026 завершён успешно |
 | `TC-AE-401` | Открыть PDP, проверить данные | Partial: `addItemFromCatalogToCartTest`, `priceMatchesBetweenCatalogAndCartTest` | Partial: `test_add_item_from_catalog_to_bag`, `test_product_price_matches_cart_price` | Проверить весь набор полей PDP |
 | `TC-AE-402` | Выбор размера | Partial: `selectedProductSizeMatchesCartSizeTest` | Partial: `test_selected_product_size_matches_cart_size` | Добавить проверку переключения вариантов |
 | `TC-AE-403` | Доступность Add to Bag | Partial: позитивное добавление | Partial: позитивное добавление | Проверить состояния до/после выбора размера |
@@ -42,7 +42,7 @@
 | `TC-AE-103` | Quantity `1 → 2` | Direct: `addItemAndChangeQuantityInBagTest`, API `updateItemTest` | Direct: `test_change_product_quantity_and_verify_subtotal`, API lifecycle | UI и API покрытие реализовано |
 | `TC-AE-104` | Subtotal после изменения количества | Direct: `addItemAndChangeQuantityInBagTest` | Direct: `test_change_product_quantity_and_verify_subtotal` | Нужна оговорка о динамических скидках |
 | `TC-AE-105` | Два товара и subtotal | Partial: API `addDifferentProductsFromSameCategoryTest` | Direct: `test_two_different_products_in_cart` | Python UI проверяет обе позиции, цены, размеры и сумму |
-| `TC-AE-106` | Удалить одну из двух позиций | Partial: `removeItemFromCartTest`, API `deleteItemTest` | Partial: `test_remove_product_from_cart`, API lifecycle | Добавить сохранение второй позиции и проверку subtotal |
+| `TC-AE-106` | Удалить одну из двух позиций | Partial: `removeItemFromCartTest`, API `deleteItemTest` | Direct: [`test_remove_one_of_two_products_from_cart`](https://github.com/ISmeneger/American_Eagle_python_automation/blob/main/tests/ui/mens_clothes/test_product_cart.py) | Python: удаление первой позиции, проверка оставшейся позиции и subtotal; общий CI 16.10.2026 прошёл |
 
 ## Проверенные файлы реализации
 
@@ -53,10 +53,16 @@
 ## Приоритеты следующей итерации
 
 1. **P1:** уточнить ожидаемый результат поиска неизвестного запроса; согласовать `@KnownDefect` / `xfail` с `Needs Clarification` ручного проекта.
-2. **Completed in Python:** `TC-AE-305` — совместная сортировка и фильтрация в одной UI-сессии; проверить CI отдельно.
-3. **P1:** `TC-AE-106` — две позиции, удаление одной, проверка оставшейся позиции и subtotal.
+2. **Completed in Python:** `TC-AE-305` — совместная сортировка и фильтрация в одной UI-сессии; общий CI 16.10.2026 успешен.
+3. **Completed in Python:** `TC-AE-106` — две позиции, удаление одной, проверка оставшейся позиции и subtotal.
 4. **P2:** `TC-AE-205` — поведение пустого запроса.
 5. **P2:** `TC-AE-203` — повторный запрос в той же сессии; `TC-AE-403` — Add to Bag до/после выбора.
 6. **P3:** расширить PDP-проверки `TC-AE-401/402`.
 
 **Ограничения:** наличие метода в репозитории не подтверждает его успешное прохождение в последнем CI-запуске. `@Disabled`, `skip` и `xfail` не считаются успешными результатами выполнения. Полная трассировка требований представлена в [RTM](../coverage/REQUIREMENTS_TRACEABILITY_MATRIX.md).
+
+## Последняя проверка автоматизации и ограничения
+
+На 16.10.2026 подтверждён успешный полный CI Python-проекта: **52 сценария, 47 passed, 4 skipped, 1 xfailed, 0 неожиданных падений**. [Опубликованный Allure Report](https://ismeneger.github.io/American_Eagle_python_automation/) объединяет API, UI и smoke результаты. Статус `skip`/`xfail` не равен `passed`. Исторические ручные результаты от 14.10.2026 (**20 выполнено, 18 Passed, 2 Needs Clarification**) в этом аудите не пересматриваются.
+
+American Eagle — внешний динамически изменяющийся production-сайт. Повторные запуски локально и в CI могут зависеть от Bloomreach popup, cookies, геолокации, DOM, цен, доступности SKU и anti-bot. Успех 16.10.2026 не гарантирует стабильность каждого последующего запуска. Портфолио-проект не предполагает непрерывной адаптации тестов к каждой новой версии сайта.
